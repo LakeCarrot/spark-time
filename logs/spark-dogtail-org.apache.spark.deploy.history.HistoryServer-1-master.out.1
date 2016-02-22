@@ -1,0 +1,18 @@
+Spark Command: /usr/lib/jvm/java-1.7.0-openjdk-amd64//bin/java -cp /home/dogtail/spark-1.4.1/sbin/../conf/:/home/dogtail/spark-1.4.1/assembly/target/scala-2.10/spark-assembly-1.4.1-hadoop2.a.jar:/home/dogtail/spark-1.4.1/lib_managed/jars/datanucleus-api-jdo-3.2.6.jar:/home/dogtail/spark-1.4.1/lib_managed/jars/datanucleus-core-3.2.10.jar:/home/dogtail/spark-1.4.1/lib_managed/jars/datanucleus-rdbms-3.2.9.jar:/home/dogtail/hadoop/etc/hadoop/ -Dspark.history.fs.logDirectory=/home/dogtail/spark/conf/events -Xms512m -Xmx512m -XX:MaxPermSize=256m org.apache.spark.deploy.history.HistoryServer
+========================================
+16/01/10 21:55:20 INFO history.HistoryServer: Registered signal handlers for [TERM, HUP, INT]
+16/01/10 21:55:21 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/10 21:55:21 INFO spark.SecurityManager: Changing view acls to: dogtail
+16/01/10 21:55:21 INFO spark.SecurityManager: Changing modify acls to: dogtail
+16/01/10 21:55:21 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(dogtail); users with modify permissions: Set(dogtail)
+16/01/10 21:55:21 INFO server.Server: jetty-8.y.z-SNAPSHOT
+16/01/10 21:55:21 INFO server.AbstractConnector: Started SelectChannelConnector@0.0.0.0:18080
+16/01/10 21:55:21 INFO util.Utils: Successfully started service on port 18080.
+16/01/10 21:55:21 INFO history.HistoryServer: Started HistoryServer at http://172.28.143.191:18080
+16/01/10 21:55:58 ERROR history.HistoryServer: RECEIVED SIGNAL 15: SIGTERM
+16/01/10 21:55:58 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/history,null}
+16/01/10 21:55:58 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/static,null}
+16/01/10 21:55:58 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/api,null}
+16/01/10 21:55:58 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/json,null}
+16/01/10 21:55:58 INFO handler.ContextHandler: stopped o.s.j.s.ServletContextHandler{/,null}
+16/01/10 21:55:58 INFO util.Utils: Shutdown hook called

@@ -1,0 +1,29 @@
+Spark Command: /usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java -cp /home/dogtail/spark-1.4.1/sbin/../conf/:/home/dogtail/spark-1.4.1/assembly/target/scala-2.10/spark-assembly-1.4.1-hadoop2.c.jar:/home/dogtail/spark-1.4.1/lib_managed/jars/datanucleus-rdbms-3.2.9.jar:/home/dogtail/spark-1.4.1/lib_managed/jars/datanucleus-api-jdo-3.2.6.jar:/home/dogtail/spark-1.4.1/lib_managed/jars/datanucleus-core-3.2.10.jar -Xms512m -Xmx512m -XX:MaxPermSize=256m org.apache.spark.deploy.worker.Worker --webui-port 8081 spark://master:7077
+========================================
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+16/02/19 15:24:46 INFO Worker: Registered signal handlers for [TERM, HUP, INT]
+16/02/19 15:24:46 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/02/19 15:24:46 INFO SecurityManager: Changing view acls to: dogtail
+16/02/19 15:24:46 INFO SecurityManager: Changing modify acls to: dogtail
+16/02/19 15:24:46 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(dogtail); users with modify permissions: Set(dogtail)
+16/02/19 15:24:47 INFO Slf4jLogger: Slf4jLogger started
+16/02/19 15:24:47 INFO Remoting: Starting remoting
+16/02/19 15:24:47 INFO Remoting: Remoting started; listening on addresses :[akka.tcp://sparkWorker@172.28.143.112:35898]
+16/02/19 15:24:47 INFO Utils: Successfully started service 'sparkWorker' on port 35898.
+16/02/19 15:24:47 INFO Worker: Starting Spark worker 172.28.143.112:35898 with 4 cores, 6.7 GB RAM
+16/02/19 15:24:47 INFO Worker: Running Spark version 1.4.1
+16/02/19 15:24:47 INFO Worker: Spark home: /home/dogtail/spark-1.4.1
+16/02/19 15:24:47 INFO Utils: Successfully started service 'WorkerUI' on port 8081.
+16/02/19 15:24:47 INFO WorkerWebUI: Started WorkerWebUI at http://172.28.143.112:8081
+16/02/19 15:24:47 INFO Worker: Connecting to master akka.tcp://sparkMaster@master:7077/user/Master...
+16/02/19 15:24:47 INFO Worker: Successfully registered with master spark://master:7077
+16/02/19 15:24:47 INFO Worker: Asked to launch executor app-20160219152446-0000/0 for SparseNaiveBayes with Params(hdfs://172.28.143.191:9000/HiBench/Bayes/Input,100,-1,1.0)
+16/02/19 15:24:47 INFO ExecutorRunner: Launch command: "/usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java" "-cp" "/home/dogtail/spark-1.4.1/sbin/../conf/:/home/dogtail/spark-1.4.1/assembly/target/scala-2.10/spark-assembly-1.4.1-hadoop2.c.jar:/home/dogtail/spark-1.4.1/lib_managed/jars/datanucleus-rdbms-3.2.9.jar:/home/dogtail/spark-1.4.1/lib_managed/jars/datanucleus-api-jdo-3.2.6.jar:/home/dogtail/spark-1.4.1/lib_managed/jars/datanucleus-core-3.2.10.jar" "-Xms6144M" "-Xmx6144M" "-Dspark.driver.port=47615" "-XX:MaxPermSize=256m" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "akka.tcp://sparkDriver@172.28.143.191:47615/user/CoarseGrainedScheduler" "--executor-id" "0" "--hostname" "172.28.143.112" "--cores" "4" "--app-id" "app-20160219152446-0000" "--worker-url" "akka.tcp://sparkWorker@172.28.143.112:35898/user/Worker"
+16/02/19 15:26:58 INFO Worker: Executor app-20160219152446-0000/0 finished with state EXITED message Command exited with code 0 exitStatus 0
+16/02/19 15:26:59 INFO Worker: Asked to kill unknown executor app-20160219152446-0000/0
+16/02/19 15:26:59 INFO Worker: Cleaning up local directories for application app-20160219152446-0000
+16/02/19 15:40:12 ERROR Worker: RECEIVED SIGNAL 15: SIGTERM
+16/02/19 15:40:12 INFO ExecutorRunner: Killing process!
+16/02/19 15:40:12 INFO Worker: Unknown Executor app-20160219152446-0000/0 finished with state EXITED message Worker shutting down exitStatus 0
+16/02/19 15:40:12 INFO Utils: Shutdown hook called
+16/02/19 15:40:12 INFO Utils: Deleting directory /tmp/spark-809d181f-921c-4815-9310-7e597655c049

@@ -1,0 +1,69 @@
+Spark Command: /usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java -cp /home/dogtail/spark-1.4.1/sbin/../conf/:/home/dogtail/spark-1.4.1/assembly/target/scala-2.10/spark-assembly-1.4.1-hadoop2.c.jar:/home/dogtail/spark-1.4.1/lib_managed/jars/datanucleus-rdbms-3.2.9.jar:/home/dogtail/spark-1.4.1/lib_managed/jars/datanucleus-api-jdo-3.2.6.jar:/home/dogtail/spark-1.4.1/lib_managed/jars/datanucleus-core-3.2.10.jar -Xms512m -Xmx512m -XX:MaxPermSize=256m org.apache.spark.deploy.worker.Worker --webui-port 8081 spark://master:7077
+========================================
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+16/02/19 15:14:26 INFO Worker: Registered signal handlers for [TERM, HUP, INT]
+16/02/19 15:14:27 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/02/19 15:14:27 INFO SecurityManager: Changing view acls to: dogtail
+16/02/19 15:14:27 INFO SecurityManager: Changing modify acls to: dogtail
+16/02/19 15:14:27 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(dogtail); users with modify permissions: Set(dogtail)
+16/02/19 15:14:27 INFO Slf4jLogger: Slf4jLogger started
+16/02/19 15:14:27 INFO Remoting: Starting remoting
+16/02/19 15:14:27 INFO Remoting: Remoting started; listening on addresses :[akka.tcp://sparkWorker@172.28.143.112:43180]
+16/02/19 15:14:27 INFO Utils: Successfully started service 'sparkWorker' on port 43180.
+16/02/19 15:14:28 INFO Worker: Starting Spark worker 172.28.143.112:43180 with 4 cores, 6.7 GB RAM
+16/02/19 15:14:28 INFO Worker: Running Spark version 1.4.1
+16/02/19 15:14:28 INFO Worker: Spark home: /home/dogtail/spark-1.4.1
+16/02/19 15:14:28 INFO Utils: Successfully started service 'WorkerUI' on port 8081.
+16/02/19 15:14:28 INFO WorkerWebUI: Started WorkerWebUI at http://172.28.143.112:8081
+16/02/19 15:14:28 INFO Worker: Connecting to master akka.tcp://sparkMaster@master:7077/user/Master...
+16/02/19 15:14:28 WARN Remoting: Tried to associate with unreachable remote address [akka.tcp://sparkMaster@master:7077]. Address is now gated for 5000 ms, all messages to this address will be delivered to dead letters. Reason: Connection refused: master/172.28.143.191:7077
+16/02/19 15:14:37 INFO Worker: Retrying connection to master (attempt # 1)
+16/02/19 15:14:37 INFO Worker: Connecting to master akka.tcp://sparkMaster@master:7077/user/Master...
+16/02/19 15:14:37 WARN Remoting: Tried to associate with unreachable remote address [akka.tcp://sparkMaster@master:7077]. Address is now gated for 5000 ms, all messages to this address will be delivered to dead letters. Reason: Connection refused: master/172.28.143.191:7077
+16/02/19 15:14:46 INFO Worker: Retrying connection to master (attempt # 2)
+16/02/19 15:14:46 INFO Worker: Connecting to master akka.tcp://sparkMaster@master:7077/user/Master...
+16/02/19 15:14:46 WARN Remoting: Tried to associate with unreachable remote address [akka.tcp://sparkMaster@master:7077]. Address is now gated for 5000 ms, all messages to this address will be delivered to dead letters. Reason: Connection refused: master/172.28.143.191:7077
+16/02/19 15:14:55 INFO Worker: Retrying connection to master (attempt # 3)
+16/02/19 15:14:55 INFO Worker: Connecting to master akka.tcp://sparkMaster@master:7077/user/Master...
+16/02/19 15:14:55 WARN Remoting: Tried to associate with unreachable remote address [akka.tcp://sparkMaster@master:7077]. Address is now gated for 5000 ms, all messages to this address will be delivered to dead letters. Reason: Connection refused: master/172.28.143.191:7077
+16/02/19 15:15:04 INFO Worker: Retrying connection to master (attempt # 4)
+16/02/19 15:15:04 INFO Worker: Connecting to master akka.tcp://sparkMaster@master:7077/user/Master...
+16/02/19 15:15:04 WARN Remoting: Tried to associate with unreachable remote address [akka.tcp://sparkMaster@master:7077]. Address is now gated for 5000 ms, all messages to this address will be delivered to dead letters. Reason: Connection refused: master/172.28.143.191:7077
+16/02/19 15:15:13 INFO Worker: Retrying connection to master (attempt # 5)
+16/02/19 15:15:13 INFO Worker: Connecting to master akka.tcp://sparkMaster@master:7077/user/Master...
+16/02/19 15:15:13 WARN Remoting: Tried to associate with unreachable remote address [akka.tcp://sparkMaster@master:7077]. Address is now gated for 5000 ms, all messages to this address will be delivered to dead letters. Reason: Connection refused: master/172.28.143.191:7077
+16/02/19 15:15:22 INFO Worker: Retrying connection to master (attempt # 6)
+16/02/19 15:15:22 INFO Worker: Connecting to master akka.tcp://sparkMaster@master:7077/user/Master...
+16/02/19 15:15:22 WARN Remoting: Tried to associate with unreachable remote address [akka.tcp://sparkMaster@master:7077]. Address is now gated for 5000 ms, all messages to this address will be delivered to dead letters. Reason: Connection refused: master/172.28.143.191:7077
+16/02/19 15:16:15 INFO Worker: Retrying connection to master (attempt # 7)
+16/02/19 15:16:15 INFO Worker: Connecting to master akka.tcp://sparkMaster@master:7077/user/Master...
+16/02/19 15:16:15 WARN Remoting: Tried to associate with unreachable remote address [akka.tcp://sparkMaster@master:7077]. Address is now gated for 5000 ms, all messages to this address will be delivered to dead letters. Reason: Connection refused: master/172.28.143.191:7077
+16/02/19 15:17:08 INFO Worker: Retrying connection to master (attempt # 8)
+16/02/19 15:17:08 INFO Worker: Connecting to master akka.tcp://sparkMaster@master:7077/user/Master...
+16/02/19 15:17:08 WARN Remoting: Tried to associate with unreachable remote address [akka.tcp://sparkMaster@master:7077]. Address is now gated for 5000 ms, all messages to this address will be delivered to dead letters. Reason: Connection refused: master/172.28.143.191:7077
+16/02/19 15:18:01 INFO Worker: Retrying connection to master (attempt # 9)
+16/02/19 15:18:01 INFO Worker: Connecting to master akka.tcp://sparkMaster@master:7077/user/Master...
+16/02/19 15:18:01 WARN Remoting: Tried to associate with unreachable remote address [akka.tcp://sparkMaster@master:7077]. Address is now gated for 5000 ms, all messages to this address will be delivered to dead letters. Reason: Connection refused: master/172.28.143.191:7077
+16/02/19 15:18:54 INFO Worker: Retrying connection to master (attempt # 10)
+16/02/19 15:18:54 INFO Worker: Connecting to master akka.tcp://sparkMaster@master:7077/user/Master...
+16/02/19 15:18:54 WARN Remoting: Tried to associate with unreachable remote address [akka.tcp://sparkMaster@master:7077]. Address is now gated for 5000 ms, all messages to this address will be delivered to dead letters. Reason: Connection refused: master/172.28.143.191:7077
+16/02/19 15:19:47 INFO Worker: Retrying connection to master (attempt # 11)
+16/02/19 15:19:47 INFO Worker: Connecting to master akka.tcp://sparkMaster@master:7077/user/Master...
+16/02/19 15:19:47 WARN Remoting: Tried to associate with unreachable remote address [akka.tcp://sparkMaster@master:7077]. Address is now gated for 5000 ms, all messages to this address will be delivered to dead letters. Reason: Connection refused: master/172.28.143.191:7077
+16/02/19 15:20:40 INFO Worker: Retrying connection to master (attempt # 12)
+16/02/19 15:20:40 INFO Worker: Connecting to master akka.tcp://sparkMaster@master:7077/user/Master...
+16/02/19 15:20:40 WARN Remoting: Tried to associate with unreachable remote address [akka.tcp://sparkMaster@master:7077]. Address is now gated for 5000 ms, all messages to this address will be delivered to dead letters. Reason: Connection refused: master/172.28.143.191:7077
+16/02/19 15:21:33 INFO Worker: Retrying connection to master (attempt # 13)
+16/02/19 15:21:33 INFO Worker: Connecting to master akka.tcp://sparkMaster@master:7077/user/Master...
+16/02/19 15:21:33 WARN Remoting: Tried to associate with unreachable remote address [akka.tcp://sparkMaster@master:7077]. Address is now gated for 5000 ms, all messages to this address will be delivered to dead letters. Reason: Connection refused: master/172.28.143.191:7077
+16/02/19 15:22:26 INFO Worker: Retrying connection to master (attempt # 14)
+16/02/19 15:22:26 INFO Worker: Connecting to master akka.tcp://sparkMaster@master:7077/user/Master...
+16/02/19 15:22:26 WARN Remoting: Tried to associate with unreachable remote address [akka.tcp://sparkMaster@master:7077]. Address is now gated for 5000 ms, all messages to this address will be delivered to dead letters. Reason: Connection refused: master/172.28.143.191:7077
+16/02/19 15:23:19 INFO Worker: Retrying connection to master (attempt # 15)
+16/02/19 15:23:19 INFO Worker: Connecting to master akka.tcp://sparkMaster@master:7077/user/Master...
+16/02/19 15:23:19 WARN Remoting: Tried to associate with unreachable remote address [akka.tcp://sparkMaster@master:7077]. Address is now gated for 5000 ms, all messages to this address will be delivered to dead letters. Reason: Connection refused: master/172.28.143.191:7077
+16/02/19 15:24:12 INFO Worker: Retrying connection to master (attempt # 16)
+16/02/19 15:24:12 INFO Worker: Connecting to master akka.tcp://sparkMaster@master:7077/user/Master...
+16/02/19 15:24:12 WARN Remoting: Tried to associate with unreachable remote address [akka.tcp://sparkMaster@master:7077]. Address is now gated for 5000 ms, all messages to this address will be delivered to dead letters. Reason: Connection refused: master/172.28.143.191:7077
+16/02/19 15:24:40 ERROR Worker: RECEIVED SIGNAL 15: SIGTERM
+16/02/19 15:24:40 INFO Utils: Shutdown hook called

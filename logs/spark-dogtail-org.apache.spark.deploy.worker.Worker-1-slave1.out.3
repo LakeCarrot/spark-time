@@ -1,0 +1,38 @@
+Spark Command: /usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java -cp /home/dogtail/spark-1.4.1/sbin/../conf/:/home/dogtail/spark-1.4.1/assembly/target/scala-2.10/spark-assembly-1.4.1-hadoop2.c.jar:/home/dogtail/spark-1.4.1/lib_managed/jars/datanucleus-rdbms-3.2.9.jar:/home/dogtail/spark-1.4.1/lib_managed/jars/datanucleus-api-jdo-3.2.6.jar:/home/dogtail/spark-1.4.1/lib_managed/jars/datanucleus-core-3.2.10.jar -Xms512m -Xmx512m -XX:MaxPermSize=256m org.apache.spark.deploy.worker.Worker --webui-port 8081 spark://master:7077
+========================================
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+16/02/19 15:40:21 INFO Worker: Registered signal handlers for [TERM, HUP, INT]
+16/02/19 15:40:22 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/02/19 15:40:22 INFO SecurityManager: Changing view acls to: dogtail
+16/02/19 15:40:22 INFO SecurityManager: Changing modify acls to: dogtail
+16/02/19 15:40:22 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(dogtail); users with modify permissions: Set(dogtail)
+16/02/19 15:40:22 INFO Slf4jLogger: Slf4jLogger started
+16/02/19 15:40:22 INFO Remoting: Starting remoting
+16/02/19 15:40:22 INFO Remoting: Remoting started; listening on addresses :[akka.tcp://sparkWorker@172.28.143.112:50334]
+16/02/19 15:40:22 INFO Utils: Successfully started service 'sparkWorker' on port 50334.
+16/02/19 15:40:22 INFO Worker: Starting Spark worker 172.28.143.112:50334 with 4 cores, 6.7 GB RAM
+16/02/19 15:40:22 INFO Worker: Running Spark version 1.4.1
+16/02/19 15:40:22 INFO Worker: Spark home: /home/dogtail/spark-1.4.1
+16/02/19 15:40:22 INFO Utils: Successfully started service 'WorkerUI' on port 8081.
+16/02/19 15:40:22 INFO WorkerWebUI: Started WorkerWebUI at http://172.28.143.112:8081
+16/02/19 15:40:22 INFO Worker: Connecting to master akka.tcp://sparkMaster@master:7077/user/Master...
+16/02/19 15:40:23 INFO Worker: Successfully registered with master spark://master:7077
+16/02/19 15:41:40 INFO Worker: Asked to launch executor app-20160219154140-0000/2 for SparseNaiveBayes with Params(hdfs://172.28.143.191:9000/HiBench/Bayes/Input,100,-1,1.0)
+16/02/19 15:41:40 INFO ExecutorRunner: Launch command: "/usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java" "-cp" "/home/dogtail/spark-1.4.1/sbin/../conf/:/home/dogtail/spark-1.4.1/assembly/target/scala-2.10/spark-assembly-1.4.1-hadoop2.c.jar:/home/dogtail/spark-1.4.1/lib_managed/jars/datanucleus-rdbms-3.2.9.jar:/home/dogtail/spark-1.4.1/lib_managed/jars/datanucleus-api-jdo-3.2.6.jar:/home/dogtail/spark-1.4.1/lib_managed/jars/datanucleus-core-3.2.10.jar" "-Xms6144M" "-Xmx6144M" "-Dspark.driver.port=35981" "-XX:MaxPermSize=256m" "org.apache.spark.executor.CoarseGrainedExecutorBackend" "--driver-url" "akka.tcp://sparkDriver@172.28.143.191:35981/user/CoarseGrainedScheduler" "--executor-id" "2" "--hostname" "172.28.143.112" "--cores" "4" "--app-id" "app-20160219154140-0000" "--worker-url" "akka.tcp://sparkWorker@172.28.143.112:50334/user/Worker"
+16/02/19 15:43:30 ERROR Worker: RECEIVED SIGNAL 15: SIGTERM
+16/02/19 15:43:30 INFO ExecutorRunner: Killing process!
+16/02/19 15:43:30 ERROR FileAppender: Error writing stream to file /home/dogtail/spark-1.4.1/work/app-20160219154140-0000/2/stderr
+java.io.IOException: Stream closed
+	at java.io.BufferedInputStream.getBufIfOpen(BufferedInputStream.java:162)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:272)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:334)
+	at java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.apache.spark.util.logging.FileAppender.appendStreamToFile(FileAppender.scala:70)
+	at org.apache.spark.util.logging.FileAppender$$anon$1$$anonfun$run$1.apply$mcV$sp(FileAppender.scala:39)
+	at org.apache.spark.util.logging.FileAppender$$anon$1$$anonfun$run$1.apply(FileAppender.scala:39)
+	at org.apache.spark.util.logging.FileAppender$$anon$1$$anonfun$run$1.apply(FileAppender.scala:39)
+	at org.apache.spark.util.Utils$.logUncaughtExceptions(Utils.scala:1772)
+	at org.apache.spark.util.logging.FileAppender$$anon$1.run(FileAppender.scala:38)
+16/02/19 15:43:30 INFO Utils: Shutdown hook called
+16/02/19 15:43:30 INFO Utils: Deleting directory /tmp/spark-4e47c031-087b-4c0a-a213-a111ddd37d8c
+16/02/19 15:43:30 INFO Worker: Executor app-20160219154140-0000/2 finished with state EXITED message Command exited with code 143 exitStatus 143

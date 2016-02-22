@@ -1,0 +1,43 @@
+Spark Command: /usr/lib/jvm/java-1.7.0-openjdk-amd64//bin/java -cp /home/dogtail/spark-1.4.1/sbin/../conf/:/home/dogtail/spark-1.4.1/assembly/target/scala-2.10/spark-assembly-1.4.1-hadoop2.a.jar:/home/dogtail/spark-1.4.1/lib_managed/jars/datanucleus-api-jdo-3.2.6.jar:/home/dogtail/spark-1.4.1/lib_managed/jars/datanucleus-core-3.2.10.jar:/home/dogtail/spark-1.4.1/lib_managed/jars/datanucleus-rdbms-3.2.9.jar:/home/dogtail/hadoop/etc/hadoop/ -Xms512m -Xmx512m -XX:MaxPermSize=256m org.apache.spark.deploy.master.Master --ip master --port 7077 --webui-port 8080
+========================================
+16/01/26 20:09:35 INFO master.Master: Registered signal handlers for [TERM, HUP, INT]
+16/01/26 20:09:35 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/26 20:09:35 INFO spark.SecurityManager: Changing view acls to: dogtail
+16/01/26 20:09:35 INFO spark.SecurityManager: Changing modify acls to: dogtail
+16/01/26 20:09:35 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(dogtail); users with modify permissions: Set(dogtail)
+16/01/26 20:09:36 INFO slf4j.Slf4jLogger: Slf4jLogger started
+16/01/26 20:09:36 INFO Remoting: Starting remoting
+16/01/26 20:09:36 INFO Remoting: Remoting started; listening on addresses :[akka.tcp://sparkMaster@master:7077]
+16/01/26 20:09:36 INFO util.Utils: Successfully started service 'sparkMaster' on port 7077.
+16/01/26 20:09:36 INFO server.Server: jetty-8.y.z-SNAPSHOT
+16/01/26 20:09:36 INFO server.AbstractConnector: Started SelectChannelConnector@master:6066
+16/01/26 20:09:36 INFO util.Utils: Successfully started service on port 6066.
+16/01/26 20:09:36 INFO rest.StandaloneRestServer: Started REST server for submitting applications on port 6066
+16/01/26 20:09:36 INFO master.Master: Starting Spark master at spark://master:7077
+16/01/26 20:09:36 INFO master.Master: Running Spark version 1.4.1
+16/01/26 20:09:36 INFO server.Server: jetty-8.y.z-SNAPSHOT
+16/01/26 20:09:36 INFO server.AbstractConnector: Started SelectChannelConnector@0.0.0.0:8080
+16/01/26 20:09:36 INFO util.Utils: Successfully started service 'MasterUI' on port 8080.
+16/01/26 20:09:36 INFO ui.MasterWebUI: Started MasterWebUI at http://172.28.143.191:8080
+16/01/26 20:09:37 INFO master.Master: I have been elected leader! New state: ALIVE
+16/01/26 20:09:38 INFO master.Master: Registering worker 172.28.141.118:41587 with 4 cores, 6.7 GB RAM
+16/01/26 20:09:38 INFO master.Master: Registering worker 172.28.143.112:50354 with 4 cores, 6.7 GB RAM
+16/01/26 20:09:38 INFO master.Master: Registering worker 172.28.140.38:33305 with 4 cores, 6.7 GB RAM
+16/01/26 20:09:51 INFO master.Master: Registering app ScalaAggregation
+16/01/26 20:09:51 INFO master.Master: Registered app ScalaAggregation with ID app-20160126200951-0000
+16/01/26 20:09:51 INFO master.Master: Launching executor app-20160126200951-0000/0 on worker worker-20160126200938-172.28.143.112-50354
+16/01/26 20:09:51 INFO master.Master: Launching executor app-20160126200951-0000/1 on worker worker-20160126200938-172.28.141.118-41587
+16/01/26 20:09:51 INFO master.Master: Launching executor app-20160126200951-0000/2 on worker worker-20160126200938-172.28.140.38-33305
+16/01/26 20:09:51 INFO master.Master: Received unregister request from application app-20160126200951-0000
+16/01/26 20:09:51 INFO master.Master: Removing app app-20160126200951-0000
+16/01/26 20:09:51 INFO spark.SecurityManager: Changing view acls to: dogtail
+16/01/26 20:09:51 INFO spark.SecurityManager: Changing modify acls to: dogtail
+16/01/26 20:09:51 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(dogtail); users with modify permissions: Set(dogtail)
+16/01/26 20:09:51 WARN master.Master: Got status update for unknown executor app-20160126200951-0000/2
+16/01/26 20:09:51 WARN master.Master: Got status update for unknown executor app-20160126200951-0000/0
+16/01/26 20:09:51 WARN master.Master: Got status update for unknown executor app-20160126200951-0000/1
+16/01/26 20:09:52 INFO master.Master: akka.tcp://sparkDriver@172.28.143.191:49229 got disassociated, removing it.
+16/01/26 20:09:52 WARN remote.ReliableDeliverySupervisor: Association with remote system [akka.tcp://sparkDriver@172.28.143.191:49229] has failed, address is now gated for [5000] ms. Reason is: [Disassociated].
+16/01/26 20:09:52 INFO master.Master: akka.tcp://sparkDriver@172.28.143.191:49229 got disassociated, removing it.
+16/01/26 20:10:06 ERROR master.Master: RECEIVED SIGNAL 15: SIGTERM
+16/01/26 20:10:06 INFO util.Utils: Shutdown hook called

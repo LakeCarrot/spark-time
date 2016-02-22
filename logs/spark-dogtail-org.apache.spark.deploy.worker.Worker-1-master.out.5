@@ -1,0 +1,21 @@
+Spark Command: /usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java -cp /home/dogtail/spark-1.4.1/sbin/../conf/:/home/dogtail/spark-1.4.1/assembly/target/scala-2.10/spark-assembly-1.4.1-hadoop2.a.jar:/home/dogtail/spark-1.4.1/lib_managed/jars/datanucleus-api-jdo-3.2.6.jar:/home/dogtail/spark-1.4.1/lib_managed/jars/datanucleus-core-3.2.10.jar:/home/dogtail/spark-1.4.1/lib_managed/jars/datanucleus-rdbms-3.2.9.jar -Xms512m -Xmx512m -XX:MaxPermSize=256m org.apache.spark.deploy.worker.Worker --webui-port 8081 spark://master:7077
+========================================
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+16/01/25 21:53:52 INFO Worker: Registered signal handlers for [TERM, HUP, INT]
+16/01/25 21:53:52 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/25 21:53:53 INFO SecurityManager: Changing view acls to: dogtail
+16/01/25 21:53:53 INFO SecurityManager: Changing modify acls to: dogtail
+16/01/25 21:53:53 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(dogtail); users with modify permissions: Set(dogtail)
+16/01/25 21:53:53 INFO Slf4jLogger: Slf4jLogger started
+16/01/25 21:53:53 INFO Remoting: Starting remoting
+16/01/25 21:53:53 INFO Remoting: Remoting started; listening on addresses :[akka.tcp://sparkWorker@172.28.143.191:42793]
+16/01/25 21:53:53 INFO Utils: Successfully started service 'sparkWorker' on port 42793.
+16/01/25 21:53:53 INFO Worker: Starting Spark worker 172.28.143.191:42793 with 1 cores, 6.7 GB RAM
+16/01/25 21:53:53 INFO Worker: Running Spark version 1.4.1
+16/01/25 21:53:53 INFO Worker: Spark home: /home/dogtail/spark-1.4.1
+16/01/25 21:53:53 INFO Utils: Successfully started service 'WorkerUI' on port 8081.
+16/01/25 21:53:53 INFO WorkerWebUI: Started WorkerWebUI at http://172.28.143.191:8081
+16/01/25 21:53:53 INFO Worker: Connecting to master akka.tcp://sparkMaster@master:7077/user/Master...
+16/01/25 21:53:54 INFO Worker: Successfully registered with master spark://master:7077
+16/01/25 21:53:57 ERROR Worker: RECEIVED SIGNAL 15: SIGTERM
+16/01/25 21:53:57 INFO Utils: Shutdown hook called

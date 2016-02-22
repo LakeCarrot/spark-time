@@ -1,0 +1,53 @@
+Spark Command: /usr/lib/jvm/java-1.7.0-openjdk-amd64//bin/java -cp /home/dogtail/spark-1.4.1/sbin/../conf/:/home/dogtail/spark-1.4.1/assembly/target/scala-2.10/spark-assembly-1.4.1-hadoop2.a.jar:/home/dogtail/spark-1.4.1/lib_managed/jars/datanucleus-api-jdo-3.2.6.jar:/home/dogtail/spark-1.4.1/lib_managed/jars/datanucleus-core-3.2.10.jar:/home/dogtail/spark-1.4.1/lib_managed/jars/datanucleus-rdbms-3.2.9.jar:/home/dogtail/hadoop/etc/hadoop/ -Xms512m -Xmx512m -XX:MaxPermSize=256m org.apache.spark.deploy.master.Master --ip master --port 7077 --webui-port 8080
+========================================
+16/01/26 21:30:44 INFO master.Master: Registered signal handlers for [TERM, HUP, INT]
+16/01/26 21:30:44 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/26 21:30:45 INFO spark.SecurityManager: Changing view acls to: dogtail
+16/01/26 21:30:45 INFO spark.SecurityManager: Changing modify acls to: dogtail
+16/01/26 21:30:45 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(dogtail); users with modify permissions: Set(dogtail)
+16/01/26 21:30:45 INFO slf4j.Slf4jLogger: Slf4jLogger started
+16/01/26 21:30:45 INFO Remoting: Starting remoting
+16/01/26 21:30:45 INFO Remoting: Remoting started; listening on addresses :[akka.tcp://sparkMaster@master:7077]
+16/01/26 21:30:45 INFO util.Utils: Successfully started service 'sparkMaster' on port 7077.
+16/01/26 21:30:45 INFO server.Server: jetty-8.y.z-SNAPSHOT
+16/01/26 21:30:45 INFO server.AbstractConnector: Started SelectChannelConnector@master:6066
+16/01/26 21:30:45 INFO util.Utils: Successfully started service on port 6066.
+16/01/26 21:30:45 INFO rest.StandaloneRestServer: Started REST server for submitting applications on port 6066
+16/01/26 21:30:45 INFO master.Master: Starting Spark master at spark://master:7077
+16/01/26 21:30:45 INFO master.Master: Running Spark version 1.4.1
+16/01/26 21:30:45 INFO server.Server: jetty-8.y.z-SNAPSHOT
+16/01/26 21:30:45 INFO server.AbstractConnector: Started SelectChannelConnector@0.0.0.0:8080
+16/01/26 21:30:45 INFO util.Utils: Successfully started service 'MasterUI' on port 8080.
+16/01/26 21:30:45 INFO ui.MasterWebUI: Started MasterWebUI at http://172.28.143.191:8080
+16/01/26 21:30:45 INFO master.Master: I have been elected leader! New state: ALIVE
+16/01/26 21:30:52 INFO master.Master: Registering worker 172.28.141.118:54069 with 4 cores, 6.7 GB RAM
+16/01/26 21:30:52 INFO master.Master: Registering worker 172.28.140.38:44384 with 4 cores, 6.7 GB RAM
+16/01/26 21:30:54 INFO master.Master: Registering worker 172.28.140.38:54043 with 4 cores, 6.7 GB RAM
+16/01/26 21:30:55 INFO master.Master: Registering worker 172.28.143.112:55713 with 4 cores, 6.7 GB RAM
+16/01/26 21:31:06 INFO master.Master: Registering worker 172.28.143.112:36853 with 4 cores, 6.7 GB RAM
+16/01/26 21:31:09 INFO master.Master: Registering app ScalaAggregation
+16/01/26 21:31:09 INFO master.Master: Registered app ScalaAggregation with ID app-20160126213109-0000
+16/01/26 21:31:10 INFO master.Master: Launching executor app-20160126213109-0000/0 on worker worker-20160126212401-172.28.140.38-54043
+16/01/26 21:31:15 WARN master.Master: Got status update for unknown executor app-20160126212706-0001/1
+16/01/26 21:31:15 WARN master.Master: Got status update for unknown executor app-20160126212706-0001/1
+16/01/26 21:31:15 INFO master.Master: akka.tcp://sparkWorker@172.28.141.118:43470 got disassociated, removing it.
+16/01/26 21:31:15 WARN remote.ReliableDeliverySupervisor: Association with remote system [akka.tcp://sparkWorker@172.28.141.118:43470] has failed, address is now gated for [5000] ms. Reason is: [Disassociated].
+16/01/26 21:31:15 INFO master.Master: akka.tcp://sparkWorker@172.28.141.118:43470 got disassociated, removing it.
+16/01/26 21:32:07 INFO master.Master: Received unregister request from application app-20160126213109-0000
+16/01/26 21:32:07 INFO master.Master: Removing app app-20160126213109-0000
+16/01/26 21:32:07 INFO spark.SecurityManager: Changing view acls to: dogtail
+16/01/26 21:32:07 INFO spark.SecurityManager: Changing modify acls to: dogtail
+16/01/26 21:32:07 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(dogtail); users with modify permissions: Set(dogtail)
+16/01/26 21:32:07 INFO master.Master: akka.tcp://sparkDriver@172.28.143.191:36272 got disassociated, removing it.
+16/01/26 21:32:07 INFO master.Master: akka.tcp://sparkDriver@172.28.143.191:36272 got disassociated, removing it.
+16/01/26 21:32:07 WARN remote.ReliableDeliverySupervisor: Association with remote system [akka.tcp://sparkDriver@172.28.143.191:36272] has failed, address is now gated for [5000] ms. Reason is: [Disassociated].
+16/01/26 21:32:19 INFO master.Master: akka.tcp://sparkWorker@172.28.141.118:54069 got disassociated, removing it.
+16/01/26 21:32:19 WARN remote.ReliableDeliverySupervisor: Association with remote system [akka.tcp://sparkWorker@172.28.141.118:54069] has failed, address is now gated for [5000] ms. Reason is: [Disassociated].
+16/01/26 21:32:19 INFO master.Master: Removing worker worker-20160126213051-172.28.141.118-54069 on 172.28.141.118:54069
+16/01/26 21:32:19 INFO master.Master: akka.tcp://sparkWorker@172.28.141.118:54069 got disassociated, removing it.
+16/01/26 21:32:21 INFO master.Master: akka.tcp://sparkWorker@172.28.140.38:54043 got disassociated, removing it.
+16/01/26 21:32:21 INFO master.Master: Removing worker worker-20160126212401-172.28.140.38-54043 on 172.28.140.38:54043
+16/01/26 21:32:21 INFO master.Master: akka.tcp://sparkWorker@172.28.140.38:54043 got disassociated, removing it.
+16/01/26 21:32:21 WARN remote.ReliableDeliverySupervisor: Association with remote system [akka.tcp://sparkWorker@172.28.140.38:54043] has failed, address is now gated for [5000] ms. Reason is: [Disassociated].
+16/01/26 21:32:22 ERROR master.Master: RECEIVED SIGNAL 15: SIGTERM
+16/01/26 21:32:22 INFO util.Utils: Shutdown hook called

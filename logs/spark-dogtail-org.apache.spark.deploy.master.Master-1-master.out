@@ -1,0 +1,37 @@
+Spark Command: /usr/lib/jvm/java-1.7.0-openjdk-amd64//bin/java -cp /home/dogtail/spark-1.4.1/sbin/../conf/:/home/dogtail/spark-1.4.1/assembly/target/scala-2.10/spark-assembly-1.4.1-hadoop2.a.jar:/home/dogtail/spark-1.4.1/lib_managed/jars/datanucleus-api-jdo-3.2.6.jar:/home/dogtail/spark-1.4.1/lib_managed/jars/datanucleus-core-3.2.10.jar:/home/dogtail/spark-1.4.1/lib_managed/jars/datanucleus-rdbms-3.2.9.jar:/home/dogtail/hadoop/etc/hadoop/ -Xms512m -Xmx512m -XX:MaxPermSize=256m org.apache.spark.deploy.master.Master --ip master --port 7077 --webui-port 8080
+========================================
+16/01/27 11:25:39 INFO master.Master: Registered signal handlers for [TERM, HUP, INT]
+16/01/27 11:25:40 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/01/27 11:25:40 INFO spark.SecurityManager: Changing view acls to: dogtail
+16/01/27 11:25:40 INFO spark.SecurityManager: Changing modify acls to: dogtail
+16/01/27 11:25:40 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(dogtail); users with modify permissions: Set(dogtail)
+16/01/27 11:25:42 INFO slf4j.Slf4jLogger: Slf4jLogger started
+16/01/27 11:25:42 INFO Remoting: Starting remoting
+16/01/27 11:25:42 INFO Remoting: Remoting started; listening on addresses :[akka.tcp://sparkMaster@master:7077]
+16/01/27 11:25:42 INFO util.Utils: Successfully started service 'sparkMaster' on port 7077.
+16/01/27 11:25:42 INFO server.Server: jetty-8.y.z-SNAPSHOT
+16/01/27 11:25:42 INFO server.AbstractConnector: Started SelectChannelConnector@master:6066
+16/01/27 11:25:42 INFO util.Utils: Successfully started service on port 6066.
+16/01/27 11:25:42 INFO rest.StandaloneRestServer: Started REST server for submitting applications on port 6066
+16/01/27 11:25:43 INFO master.Master: Starting Spark master at spark://master:7077
+16/01/27 11:25:43 INFO master.Master: Running Spark version 1.4.1
+16/01/27 11:25:43 INFO server.Server: jetty-8.y.z-SNAPSHOT
+16/01/27 11:25:43 INFO server.AbstractConnector: Started SelectChannelConnector@0.0.0.0:8080
+16/01/27 11:25:43 INFO util.Utils: Successfully started service 'MasterUI' on port 8080.
+16/01/27 11:25:43 INFO ui.MasterWebUI: Started MasterWebUI at http://172.28.143.191:8080
+16/01/27 11:25:43 INFO master.Master: I have been elected leader! New state: ALIVE
+16/01/27 11:25:43 INFO master.Master: Registering worker 172.28.143.191:48050 with 4 cores, 6.7 GB RAM
+16/01/27 11:26:09 INFO master.Master: Registering app DenseKMeans with Params(hdfs://172.28.143.191:9000/HiBench/Kmeans/Input/samples,10,1,Parallel)
+16/01/27 11:26:09 INFO master.Master: Registered app DenseKMeans with Params(hdfs://172.28.143.191:9000/HiBench/Kmeans/Input/samples,10,1,Parallel) with ID app-20160127112609-0000
+16/01/27 11:26:09 INFO master.Master: Launching executor app-20160127112609-0000/0 on worker worker-20160127112542-172.28.143.191-48050
+16/01/27 11:26:23 INFO master.Master: Received unregister request from application app-20160127112609-0000
+16/01/27 11:26:23 INFO master.Master: Removing app app-20160127112609-0000
+16/01/27 11:26:23 INFO spark.SecurityManager: Changing view acls to: dogtail
+16/01/27 11:26:23 INFO spark.SecurityManager: Changing modify acls to: dogtail
+16/01/27 11:26:23 INFO spark.SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users with view permissions: Set(dogtail); users with modify permissions: Set(dogtail)
+16/01/27 11:26:23 WARN remote.ReliableDeliverySupervisor: Association with remote system [akka.tcp://sparkDriver@172.28.143.191:40307] has failed, address is now gated for [5000] ms. Reason is: [Disassociated].
+16/01/27 11:26:24 INFO master.Master: akka.tcp://sparkDriver@172.28.143.191:40307 got disassociated, removing it.
+16/01/27 11:26:24 INFO master.Master: akka.tcp://sparkDriver@172.28.143.191:40307 got disassociated, removing it.
+16/01/27 11:26:24 WARN master.Master: Got status update for unknown executor app-20160127112609-0000/0
+16/01/27 11:29:55 ERROR master.Master: RECEIVED SIGNAL 15: SIGTERM
+16/01/27 11:29:55 INFO util.Utils: Shutdown hook called
